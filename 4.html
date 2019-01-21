@@ -1,0 +1,6 @@
+<script>
+function largest(...input){
+return input.shift(input.sort(function(a,b){return b - a}));
+}
+alert(largest(-5, -2, -6, 0, -1));
+</script>

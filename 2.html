@@ -1,0 +1,9 @@
+<script>
+function signOfProduct(...nums) {
+  const negNums = nums.filter(num => num < 0 )
+  if (negNums.length%2 == 0 ) alert('The sign is +');
+  if (negNums.length%2 != 0 ) alert('The sign is -');
+}
+
+signOfProduct(2, -3, 6);
+</script>

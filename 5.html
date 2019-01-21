@@ -1,0 +1,26 @@
+<script>
+let stNames = ['david','vinoth','divya','ishitha','thomas'];
+let stGrades = [80,77,88,95,68];
+let avg = 0;
+
+function letterGrade(name,grade){
+if(grade >= 90 && grade <= 100){
+return (name + ' received an A.');
+}if(grade >= 80 && grade < 90){
+return (name + ' received an B.');
+}if(grade >=70 && grade < 80){
+return (name + ' received an C.');
+}if(grade >= 60 && grade < 70){
+return (name + ' received an D.');
+}if(grade < 60){
+return (name + ' received an F.');
+};
+};
+letterGrade();
+
+for(let i in stNames){
+console.log(letterGrade(stNames[i],stGrades[i]));
+avg+=stGrades[i];
+};
+console.log(avg/stGrades.length);
+</script>

@@ -1,0 +1,23 @@
+<script>
+var num = 100;
+
+for (var num = 100; num <1000 ; num++)
+{
+
+var sum = 0;
+var digit;
+
+digit = num.toString();
+
+for (var i = 0 ; i < digit.length;i++){
+
+sum+= parseInt(digit[i])* parseInt(digit[i]) * parseInt(digit[i]);
+}
+if (sum == num){
+console.log("The armstrong number is: " +sum);
+
+}else {
+console.log(num + " is not an Armstrong number");
+}
+}
+</script>

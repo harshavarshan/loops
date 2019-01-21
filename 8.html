@@ -1,0 +1,23 @@
+<script>
+function isHappy(num) {
+    if (num === 4) return false;
+    const splitNum = [];
+    while (num) {
+        const last = num % 10;
+        num = Math.floor(num / 10);
+        splitNum.push(last);
+    }
+    const sum = splitNum.map(n => n ** 2).reduce((a, b) => a + b);
+
+    return sum === 1 ? true : isHappy(sum);
+}
+
+function fiveHappy() {
+    const array = [];
+    for (let i = 1; array.length < 5; i++) {
+        if (isHappy(i)) array.push(i);
+    }
+    return array;
+}
+console.log(fiveHappy());
+</script>
